@@ -1,0 +1,32 @@
+
+[1mFrom:[0m /home/cassianodz/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/actionview-6.1.4.4/lib/action_view/helpers/form_helper.rb:429 ActionView::Helpers::FormHelper#form_for:
+
+    [1;34m428[0m: [32mdef[0m [1;34mform_for[0m(record, options = {}, &block)
+ => [1;34m429[0m:   raise [1;34;4mArgumentError[0m, [31m[1;31m"[0m[31mMissing block[1;31m"[0m[31m[0m [32munless[0m block_given?
+    [1;34m430[0m:   html_options = options[[33m:html[0m] ||= {}
+    [1;34m431[0m: 
+    [1;34m432[0m:   [32mcase[0m record
+    [1;34m433[0m:   [32mwhen[0m [1;34;4mString[0m, [1;34;4mSymbol[0m
+    [1;34m434[0m:     object_name = record
+    [1;34m435[0m:     object      = [1;36mnil[0m
+    [1;34m436[0m:   [32melse[0m
+    [1;34m437[0m:     object      = record.is_a?([1;34;4mArray[0m) ? record.last : record
+    [1;34m438[0m:     raise [1;34;4mArgumentError[0m, [31m[1;31m"[0m[31mFirst argument in form cannot contain nil or be empty[1;31m"[0m[31m[0m [32munless[0m object
+    [1;34m439[0m:     object_name = options[[33m:as[0m] || model_name_from_record_or_class(object).param_key
+    [1;34m440[0m:     apply_form_for_options!(record, object, options)
+    [1;34m441[0m:   [32mend[0m
+    [1;34m442[0m: 
+    [1;34m443[0m:   html_options[[33m:data[0m]   = options.delete([33m:data[0m)   [32mif[0m options.has_key?([33m:data[0m)
+    [1;34m444[0m:   html_options[[33m:remote[0m] = options.delete([33m:remote[0m) [32mif[0m options.has_key?([33m:remote[0m)
+    [1;34m445[0m:   html_options[[33m:method[0m] = options.delete([33m:method[0m) [32mif[0m options.has_key?([33m:method[0m)
+    [1;34m446[0m:   html_options[[33m:enforce_utf8[0m] = options.delete([33m:enforce_utf8[0m) [32mif[0m options.has_key?([33m:enforce_utf8[0m)
+    [1;34m447[0m:   html_options[[33m:authenticity_token[0m] = options.delete([33m:authenticity_token[0m)
+    [1;34m448[0m: 
+    [1;34m449[0m:   builder = instantiate_builder(object_name, object, options)
+    [1;34m450[0m:   output  = capture(builder, &block)
+    [1;34m451[0m:   html_options[[33m:multipart[0m] ||= builder.multipart?
+    [1;34m452[0m: 
+    [1;34m453[0m:   html_options = html_options_for_form(options[[33m:url[0m] || {}, html_options)
+    [1;34m454[0m:   form_tag_with_body(html_options, output)
+    [1;34m455[0m: [32mend[0m
+

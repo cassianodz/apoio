@@ -1,0 +1,62 @@
+<div class = "tudo">
+<h1><strong> Calendário de Apoios</strong></h1>
+<script>
+const botoes = [];
+</script>
+<%plantaodia = @teste%>
+<%@meeting = Meeting.new%>
+<%data = @data_inicio.first%>
+<%b = 0 %>
+
+<%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
+  <%case plantaodia%>
+  <%when 0%>
+  <%a = "alfa"%>
+  <%when 1%>
+  <%a = "bravo"%>
+  <%when 2%>
+  <%a = "charlie"%>
+  <%when 3%>
+  <%a = "delta"%>
+  <%end%>
+  <%b = b + 1 %>
+  <%plantaodia = plantaodia + 1 %>
+  <%plantaodia = plantaodia.modulo(4)%>
+  <div class = <%=a%>>
+  <%= "#{data.strftime("%d")} - #{a.capitalize}" %>
+  <%#binding.pry%>
+  <%#= simple_form_for @meeting, namespace: data.strftime("%d/%m/%Y") do |f| %>
+
+<%= simple_form_for @meeting, url: create_meeting_url, namespace: data.strftime("%d/%m/%Y")   do |f| %>
+  <%=f.hidden_field :start_time, value: data%>
+  <%=f.hidden_field :end_time, value: data%>
+  <%#=f.hidden_field :name, value: current_user.name%>
+  <%= f.submit "Marcar", class: "btn btn-primary" %>
+
+
+
+   <% meetings.each do |meeting| %>
+    <div class="meeting">
+      <%= meeting.name %>
+      <br>
+    </div>
+    </div>
+  <% end %>
+
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+  <%data = data + 1 unless data.nil? %>
+<% end %>
+</div>
