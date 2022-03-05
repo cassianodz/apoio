@@ -15928,3 +15928,25 @@ Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-03 20:51:10 -0400
   
 ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
   
+Started GET "/" for 127.0.0.1 at 2022-03-03 21:13:43 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 58.0ms | Allocations: 20314)
+  Rendered pages/home.html.erb within layouts/application (Duration: 75.9ms | Allocations: 25974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.9ms | Allocations: 1520)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 322.4ms | Allocations: 76510)
+Completed 200 OK in 401ms (Views: 321.7ms | ActiveRecord: 34.4ms | Allocations: 92877)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-03 21:13:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
