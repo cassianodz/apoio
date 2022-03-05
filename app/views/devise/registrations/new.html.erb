@@ -7,12 +7,14 @@
 
   <div class="form-inputs">
     <%= f.input :nome, required: true,
+                label: "Nome",
+                autofocus: true,
                 hint: "Insira seu nome de guerra em maiusculas"  %>
     <%= f.input :plantao, collection: ['ALPHA', 'BRAVO', 'CHARLIE', 'DELTA'],
+                label: "Plantão",
                 required: true %>
     <%= f.input :email,
                 required: true,
-                autofocus: true,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,

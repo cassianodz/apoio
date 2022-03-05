@@ -11,7 +11,7 @@ document.addEventListener('turbolinks:load', () => {
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <h1>Criar novo apoio</h1>
       <%= simple_form_for (@meeting) do |f| %>
-        <%= f.input :start_time, as: :string, label: "Data de Início", required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :start_time, as: :string, label: "Data Inicial", required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_time, as: :string, label: "Data Final",required: false, input_html: {class: "datepicker"} %>
         <%= f.submit "Go", class: "btn btn-primary" %>
       <% end %>

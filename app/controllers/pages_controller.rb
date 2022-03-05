@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     #@meetings = Meeting.where(starts_at: start_date.beginning_of_week..start_date.end_of_week)
     @teste = start_date.beginning_of_month.beginning_of_week
     @mes = t('date.month_names')[start_date.month]
-    traduz_mes
+    # traduz_mes
     calcula_plantao
   end
 

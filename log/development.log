@@ -15972,3 +15972,1332 @@ Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 11:05:37 -0400
   
 ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
   
+Started GET "/" for 127.0.0.1 at 2022-03-05 15:40:12 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 88.0ms | Allocations: 23695)
+  Rendered pages/home.html.erb within layouts/application (Duration: 109.4ms | Allocations: 29425)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.8ms | Allocations: 1517)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 444.3ms | Allocations: 79959)
+Completed 200 OK in 533ms (Views: 444.0ms | ActiveRecord: 33.4ms | Allocations: 99484)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 15:40:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 15:40:26 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.4ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 31.3ms | Allocations: 14658)
+  Rendered pages/home.html.erb within layouts/application (Duration: 35.7ms | Allocations: 15831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 1056)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 61)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 28279)
+Completed 200 OK in 69ms (Views: 60.3ms | ActiveRecord: 2.6ms | Allocations: 30533)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-05 15:40:29 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms | Allocations: 3826)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 15:40:29 -0400
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 15:40:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 683)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.6ms | Allocations: 22951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 610)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 34994)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.0ms | Allocations: 37039)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 15:40:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-05 15:42:16 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"2@3.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "2@3.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 17ms (ActiveRecord: 7.8ms | Allocations: 3874)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"2@3.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 20581)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 580)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 56)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 32580)
+Completed 200 OK in 359ms (Views: 61.3ms | ActiveRecord: 0.0ms | Allocations: 38294)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 15:42:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-05 15:42:29 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 187)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 39.8ms | Allocations: 29059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 613)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 41047)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms | Allocations: 42723)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-03-05 15:46:04 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Malaquias", "plantao"=>"ALPHA", "email"=>"44@44.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrar"}
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "44@44.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (15.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "nome", "plantao") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "44@44.com"], ["encrypted_password", "$2a$12$fYPqu50DkxtIlXEZMll.fuekCK9Z5RogNYh4jdlIOKXYGBDhpxzsG"], ["created_at", "2022-03-05 19:46:04.886010"], ["updated_at", "2022-03-05 19:46:04.886010"], ["nome", "MALAQUIAS"], ["plantao", "ALPHA"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 315ms (ActiveRecord: 22.2ms | Allocations: 8578)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 15:46:04 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 27.1ms | Allocations: 15321)
+  Rendered pages/home.html.erb within layouts/application (Duration: 41.3ms | Allocations: 19771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.3ms | Allocations: 1080)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | Allocations: 32303)
+Completed 200 OK in 111ms (Views: 83.9ms | ActiveRecord: 17.2ms | Allocations: 36234)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 15:46:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:01:42 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (4.8ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 247.5ms | Allocations: 15231)
+  Rendered pages/home.html.erb within layouts/application (Duration: 340.6ms | Allocations: 17272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 15.4ms | Allocations: 1446)
+  Rendered shared/_flashes.html.erb (Duration: 1.8ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 693.8ms | Allocations: 30847)
+Completed 200 OK in 1339ms (Views: 754.8ms | ActiveRecord: 162.3ms | Allocations: 37150)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:01:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:01:47 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 54.5ms | Allocations: 14618)
+  Rendered pages/home.html.erb within layouts/application (Duration: 59.0ms | Allocations: 15733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 1046)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.4ms | Allocations: 28053)
+Completed 200 OK in 122ms (Views: 101.8ms | ActiveRecord: 3.1ms | Allocations: 30036)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:01:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/?start_date=2022-02-27" for 127.0.0.1 at 2022-03-05 16:01:48 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-02-27"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-01-31"], ["start_time", "2022-03-06"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 30.5ms | Allocations: 16621)
+  Rendered pages/home.html.erb within layouts/application (Duration: 34.4ms | Allocations: 17739)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1052)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 30068)
+Completed 200 OK in 71ms (Views: 57.0ms | ActiveRecord: 2.9ms | Allocations: 32004)
+
+
+Started GET "/?start_date=2022-03-07" for 127.0.0.1 at 2022-03-05 16:01:49 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-03-07"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 31.1ms | Allocations: 16443)
+  Rendered pages/home.html.erb within layouts/application (Duration: 35.3ms | Allocations: 17593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 1054)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.7ms | Allocations: 29922)
+Completed 200 OK in 80ms (Views: 66.7ms | ActiveRecord: 4.7ms | Allocations: 31858)
+
+
+Started GET "/?start_date=2022-04-04" for 127.0.0.1 at 2022-03-05 16:01:50 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-04-04"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.9ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-03-28"], ["start_time", "2022-05-01"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 33.3ms | Allocations: 16493)
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.9ms | Allocations: 17580)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1051)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.2ms | Allocations: 29738)
+Completed 200 OK in 78ms (Views: 66.9ms | ActiveRecord: 4.6ms | Allocations: 31655)
+
+
+Started GET "/?start_date=2022-05-02" for 127.0.0.1 at 2022-03-05 16:01:51 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-05-02"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-04-25"], ["start_time", "2022-06-05"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 33.4ms | Allocations: 19862)
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.8ms | Allocations: 20955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1052)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 33283)
+Completed 200 OK in 71ms (Views: 60.0ms | ActiveRecord: 4.0ms | Allocations: 35200)
+
+
+Started GET "/?start_date=2022-06-06" for 127.0.0.1 at 2022-03-05 16:01:52 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-06-06"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (4.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-05-30"], ["start_time", "2022-07-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 36.0ms | Allocations: 16497)
+  Rendered pages/home.html.erb within layouts/application (Duration: 45.8ms | Allocations: 17583)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 1054)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.3ms | Allocations: 29815)
+Completed 200 OK in 86ms (Views: 73.7ms | ActiveRecord: 5.2ms | Allocations: 31750)
+
+
+Started GET "/?start_date=2022-07-04" for 127.0.0.1 at 2022-03-05 16:01:54 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-07-04"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-06-27"], ["start_time", "2022-07-31"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 28.2ms | Allocations: 16431)
+  Rendered pages/home.html.erb within layouts/application (Duration: 32.3ms | Allocations: 17518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1051)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 29676)
+Completed 200 OK in 67ms (Views: 59.9ms | ActiveRecord: 2.1ms | Allocations: 31593)
+
+
+Started GET "/?start_date=2022-08-01" for 127.0.0.1 at 2022-03-05 16:01:55 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-08-01"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-08-01"], ["start_time", "2022-09-04"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 31.6ms | Allocations: 16431)
+  Rendered pages/home.html.erb within layouts/application (Duration: 35.6ms | Allocations: 17518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 1049)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 29622)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 2.3ms | Allocations: 31537)
+
+
+Started GET "/?start_date=2022-08-01" for 127.0.0.1 at 2022-03-05 16:10:53 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-08-01"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-08-01"], ["start_time", "2022-09-04"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 42.9ms | Allocations: 17217)
+  Rendered pages/home.html.erb within layouts/application (Duration: 56.9ms | Allocations: 21341)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.0ms | Allocations: 1083)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.9ms | Allocations: 33846)
+Completed 200 OK in 74639ms (Views: 105.7ms | ActiveRecord: 30.4ms | Allocations: 119096)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:36:39 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 73.3ms | Allocations: 23099)
+  Rendered pages/home.html.erb within layouts/application (Duration: 92.9ms | Allocations: 28825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.2ms | Allocations: 1520)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 240.9ms | Allocations: 79279)
+Completed 200 OK in 15309ms (Views: 242.2ms | ActiveRecord: 30.4ms | Allocations: 137090)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:36:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:37:57 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:38:02 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.1ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 48.6ms | Allocations: 14575)
+  Rendered pages/home.html.erb within layouts/application (Duration: 56.8ms | Allocations: 16620)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.9ms | Allocations: 1443)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.2ms | Allocations: 29939)
+Completed 200 OK in 9897ms (Views: 93.4ms | ActiveRecord: 191.9ms | Allocations: 2144989)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:38:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:39:06 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:39:08 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:39:09 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (26.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:39:14 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (26.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 50.6ms | Allocations: 13969)
+  Rendered pages/home.html.erb within layouts/application (Duration: 57.3ms | Allocations: 15088)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.2ms | Allocations: 1052)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.0ms | Allocations: 27163)
+Completed 200 OK in 19447ms (Views: 108.2ms | ActiveRecord: 236.6ms | Allocations: 2739977)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:39:33 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (3.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 53.9ms | Allocations: 13970)
+  Rendered pages/home.html.erb within layouts/application (Duration: 61.7ms | Allocations: 15083)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.2ms | Allocations: 1046)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.1ms | Allocations: 27037)
+Completed 200 OK in 1808ms (Views: 95.1ms | ActiveRecord: 4.9ms | Allocations: 40587)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-05 16:40:00 -0400
+Completed 500 Internal Server Error in 180011ms (ActiveRecord: 229.1ms | Allocations: 5812199)
+
+
+  
+Errno::EIO (Input/output error @ io_writev - <STDOUT>):
+  
+app/controllers/pages_controller.rb:22:in `home'
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendering pages/home.html.erb within layouts/application
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (3.6ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 30.3ms | Allocations: 13970)
+  Rendered pages/home.html.erb within layouts/application (Duration: 41.0ms | Allocations: 18524)
+  [1m[36mMeeting Load (33.1ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  [1m[36mMeeting Load (40.8ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 34.7ms | Allocations: 13972)
+  Rendered pages/home.html.erb within layouts/application (Duration: 122.6ms | Allocations: 55657)
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 32.1ms | Allocations: 13972)
+  Rendered pages/home.html.erb within layouts/application (Duration: 131.5ms | Allocations: 59868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.1ms | Allocations: 1525)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 184.7ms | Allocations: 84238)
+Completed 200 OK in 252036ms (Views: 424.4ms | ActiveRecord: 4.8ms | Allocations: 11579219)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.5ms | Allocations: 2177)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 269.2ms | Allocations: 118676)
+Completed 200 OK in 183230ms (Views: 431.6ms | ActiveRecord: 43.0ms | Allocations: 9105511)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 1054)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 496.1ms | Allocations: 209057)
+Completed 200 OK in 181373ms (Views: 553.8ms | ActiveRecord: 236.2ms | Allocations: 8804812)
+
+
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 38ms (ActiveRecord: 10.6ms | Allocations: 10274)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:43:19 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 77.9ms | Allocations: 23106)
+  Rendered pages/home.html.erb within layouts/application (Duration: 97.0ms | Allocations: 28836)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 8.1ms | Allocations: 1517)
+  Rendered shared/_flashes.html.erb (Duration: 1.4ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 262.2ms | Allocations: 79332)
+Completed 200 OK in 346ms (Views: 263.9ms | ActiveRecord: 16.9ms | Allocations: 100223)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:43:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:43:28 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.4ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 35.1ms | Allocations: 14079)
+  Rendered pages/home.html.erb within layouts/application (Duration: 41.4ms | Allocations: 15252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1059)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 61)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 27705)
+Completed 200 OK in 78ms (Views: 68.4ms | ActiveRecord: 3.5ms | Allocations: 29945)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-05 16:43:30 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms | Allocations: 3826)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:43:30 -0400
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 16:43:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 683)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.6ms | Allocations: 22951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 609)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 34998)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms | Allocations: 37043)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:43:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-05 16:43:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"44@44.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "44@44.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 342ms (ActiveRecord: 1.4ms | Allocations: 5137)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:43:34 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 24.9ms | Allocations: 14074)
+  Rendered pages/home.html.erb within layouts/application (Duration: 28.7ms | Allocations: 15243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1058)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 61)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 27690)
+Completed 200 OK in 58ms (Views: 50.8ms | ActiveRecord: 2.4ms | Allocations: 29826)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:43:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/?start_date=2022-04-04" for 127.0.0.1 at 2022-03-05 16:43:37 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-04-04"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-03-28"], ["start_time", "2022-05-01"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 28.1ms | Allocations: 15850)
+  Rendered pages/home.html.erb within layouts/application (Duration: 31.3ms | Allocations: 16937)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 1052)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 29265)
+Completed 200 OK in 63ms (Views: 54.9ms | ActiveRecord: 2.5ms | Allocations: 31182)
+
+
+Started GET "/?start_date=2022-05-02" for 127.0.0.1 at 2022-03-05 16:43:38 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-05-02"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-04-25"], ["start_time", "2022-06-05"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 35.2ms | Allocations: 19216)
+  Rendered pages/home.html.erb within layouts/application (Duration: 39.4ms | Allocations: 20310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 1048)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 32330)
+Completed 200 OK in 71ms (Views: 63.3ms | ActiveRecord: 2.9ms | Allocations: 34234)
+
+
+Started GET "/?start_date=2022-05-02" for 127.0.0.1 at 2022-03-05 16:43:48 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-05-02"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.9ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-04-25"], ["start_time", "2022-06-05"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 50.6ms | Allocations: 19218)
+  Rendered pages/home.html.erb within layouts/application (Duration: 57.2ms | Allocations: 20311)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.0ms | Allocations: 1052)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 32640)
+Completed 200 OK in 95ms (Views: 85.8ms | ActiveRecord: 3.9ms | Allocations: 34571)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-05 16:43:59 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 2029)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:43:59 -0400
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 16:43:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.4ms | Allocations: 20347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 566)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 32099)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms | Allocations: 32712)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:43:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-05 16:44:00 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"44@44.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "44@44.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 277ms (ActiveRecord: 1.2ms | Allocations: 2548)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:44:01 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 23.9ms | Allocations: 13975)
+  Rendered pages/home.html.erb within layouts/application (Duration: 29.0ms | Allocations: 15089)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 1053)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 60)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 27422)
+Completed 200 OK in 62ms (Views: 55.2ms | ActiveRecord: 2.2ms | Allocations: 29317)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:44:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/?start_date=2022-04-04" for 127.0.0.1 at 2022-03-05 16:44:04 -0400
+Processing by PagesController#home as HTML
+  Parameters: {"start_date"=>"2022-04-04"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-03-28"], ["start_time", "2022-05-01"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 29.5ms | Allocations: 15847)
+  Rendered pages/home.html.erb within layouts/application (Duration: 34.0ms | Allocations: 16934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.9ms | Allocations: 1050)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 29224)
+Completed 200 OK in 67ms (Views: 57.1ms | ActiveRecord: 3.9ms | Allocations: 31128)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 16:44:11 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 7669)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 1082)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 19852)
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 1.0ms | Allocations: 22803)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 16:46:40 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 7599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 1452)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 21098)
+Completed 200 OK in 51ms (Views: 43.8ms | ActiveRecord: 1.1ms | Allocations: 24181)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-05 16:46:44 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms | Allocations: 2255)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 16:46:44 -0400
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 16:46:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 551)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 28.8ms | Allocations: 21297)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 601)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 33026)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 34856)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:46:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-05 16:46:46 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 186)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 45.2ms | Allocations: 29062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 608)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 41097)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms | Allocations: 42776)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-05 16:47:27 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 43.8ms | Allocations: 28568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 966)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | Allocations: 41300)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.0ms | Allocations: 43371)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-05 16:47:58 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.8ms | Allocations: 20392)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 20474)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms | Allocations: 22516)
+
+
+  
+ActionView::Template::Error (undefined method `plantão' for #<User id: nil, email: "", created_at: nil, updated_at: nil, nome: nil, plantao: nil>
+Did you mean?  plantao
+               plantao?
+               plantao=):
+     9:     <%= f.input :nome, required: true,
+    10:                 autofocus: true,
+    11:                 hint: "Insira seu nome de guerra em maiusculas"  %>
+    12:     <%= f.input :plantão, collection: ['ALPHA', 'BRAVO', 'CHARLIE', 'DELTA'],
+    13:                 required: true %>
+    14:     <%= f.input :email,
+    15:                 required: true,
+  
+app/views/devise/registrations/new.html.erb:12
+app/views/devise/registrations/new.html.erb:5
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 16:48:11 -0400
+Processing by MeetingsController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 16:48:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 551)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.1ms | Allocations: 21302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.2ms | Allocations: 969)
+  Rendered shared/_flashes.html.erb (Duration: 1.1ms | Allocations: 222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 34347)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.0ms | Allocations: 35781)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:48:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-05 16:49:10 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.2ms | Allocations: 19660)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 19736)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 20314)
+
+
+  
+ActionView::Template::Error (undefined method `plantão' for #<User id: nil, email: "", created_at: nil, updated_at: nil, nome: nil, plantao: nil>
+Did you mean?  plantao
+               plantao?
+               plantao=):
+     9:     <%= f.input :nome, required: true,
+    10:                 autofocus: true,
+    11:                 hint: "Insira seu nome de guerra em maiusculas"  %>
+    12:     <%= f.input :plantão, collection: ['ALPHA', 'BRAVO', 'CHARLIE', 'DELTA'],
+    13:                 required: true %>
+    14:     <%= f.input :email,
+    15:                 required: true,
+  
+app/views/devise/registrations/new.html.erb:12
+app/views/devise/registrations/new.html.erb:5
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-05 16:49:22 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 508)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 42.9ms | Allocations: 28350)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 970)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 41389)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms | Allocations: 43387)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 16:49:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:13:51 -0400
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 41ms (Allocations: 229)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 17:13:51 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 173)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 184.5ms | Allocations: 20797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.2ms | Allocations: 606)
+  Rendered shared/_flashes.html.erb (Duration: 0.9ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 330.4ms | Allocations: 32834)
+Completed 200 OK in 436ms (Views: 365.4ms | Allocations: 34256)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:13:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-05 17:13:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"44@44.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "44@44.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 568ms (ActiveRecord: 92.3ms | Allocations: 7288)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:13:57 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (3.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 58.3ms | Allocations: 14581)
+  Rendered pages/home.html.erb within layouts/application (Duration: 93.2ms | Allocations: 16635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.1ms | Allocations: 1077)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 128.3ms | Allocations: 29202)
+Completed 200 OK in 161ms (Views: 130.0ms | ActiveRecord: 5.1ms | Allocations: 31891)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:13:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:14:00 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.2ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 27.4ms | Allocations: 13973)
+  Rendered pages/home.html.erb within layouts/application (Duration: 35.0ms | Allocations: 15088)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.2ms | Allocations: 1053)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.0ms | Allocations: 27417)
+Completed 200 OK in 108ms (Views: 90.4ms | ActiveRecord: 4.1ms | Allocations: 29387)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:16:12 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 38.4ms | Allocations: 14573)
+  Rendered pages/home.html.erb within layouts/application (Duration: 45.5ms | Allocations: 16610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.2ms | Allocations: 1442)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 30184)
+Completed 200 OK in 101ms (Views: 89.4ms | ActiveRecord: 3.4ms | Allocations: 33097)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:16:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:16:18 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 25.0ms | Allocations: 13971)
+  Rendered pages/home.html.erb within layouts/application (Duration: 29.0ms | Allocations: 15085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1054)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 27415)
+Completed 200 OK in 63ms (Views: 55.4ms | ActiveRecord: 2.4ms | Allocations: 29382)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:16:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:04 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 29.1ms | Allocations: 14573)
+  Rendered pages/home.html.erb within layouts/application (Duration: 35.2ms | Allocations: 16611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.3ms | Allocations: 1055)
+  Rendered shared/_flashes.html.erb (Duration: 0.8ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 29798)
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 2.7ms | Allocations: 32712)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:17:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:10 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.7ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 35.3ms | Allocations: 13972)
+  Rendered pages/home.html.erb within layouts/application (Duration: 42.4ms | Allocations: 15087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 642)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 27005)
+Completed 200 OK in 104ms (Views: 84.3ms | ActiveRecord: 4.1ms | Allocations: 28975)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:11 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (4.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 30.1ms | Allocations: 13970)
+  Rendered pages/home.html.erb within layouts/application (Duration: 37.3ms | Allocations: 15083)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 640)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 26999)
+Completed 200 OK in 75ms (Views: 63.2ms | ActiveRecord: 5.3ms | Allocations: 28894)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:13 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.8ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 32.2ms | Allocations: 13970)
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.2ms | Allocations: 15084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 637)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.1ms | Allocations: 26693)
+Completed 200 OK in 77ms (Views: 67.0ms | ActiveRecord: 3.0ms | Allocations: 28586)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:14 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.8ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 30.3ms | Allocations: 13971)
+  Rendered pages/home.html.erb within layouts/application (Duration: 35.7ms | Allocations: 15086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 642)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 27004)
+Completed 200 OK in 68ms (Views: 58.1ms | ActiveRecord: 3.8ms | Allocations: 28899)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:41 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (2.4ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 25.6ms | Allocations: 14573)
+  Rendered pages/home.html.erb within layouts/application (Duration: 32.6ms | Allocations: 16611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 590)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 29144)
+Completed 200 OK in 69ms (Views: 59.7ms | ActiveRecord: 3.3ms | Allocations: 32056)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:17:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:17:46 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 24.4ms | Allocations: 13970)
+  Rendered pages/home.html.erb within layouts/application (Duration: 28.2ms | Allocations: 15084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 202)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 26562)
+Completed 200 OK in 57ms (Views: 48.6ms | ActiveRecord: 2.5ms | Allocations: 28532)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 17:18:08 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 7599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 234)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 19046)
+Completed 200 OK in 62ms (Views: 53.5ms | ActiveRecord: 1.6ms | Allocations: 21631)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 17:18:13 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 7151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 18537)
+Completed 200 OK in 46ms (Views: 39.6ms | ActiveRecord: 1.0ms | Allocations: 20565)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 17:18:46 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 7593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 1452)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 20791)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 1.1ms | Allocations: 23647)
+
+
+Started GET "/meetings/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:18:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/meetings/_calendar.scss"):
+  
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 17:18:49 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 7155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 1047)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 19383)
+Completed 200 OK in 41ms (Views: 35.8ms | ActiveRecord: 0.9ms | Allocations: 21378)
+
+
+Started GET "/meetings/new" for 127.0.0.1 at 2022-03-05 17:20:45 -0400
+Processing by MeetingsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering meetings/new.html.erb within layouts/application
+  Rendered meetings/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 7589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.2ms | Allocations: 1503)
+  Rendered shared/_flashes.html.erb (Duration: 0.9ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 20838)
+Completed 200 OK in 63ms (Views: 55.4ms | ActiveRecord: 1.0ms | Allocations: 23670)
+
+
+Started GET "/meetings/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:20:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/meetings/_calendar.scss"):
+  
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-05 17:20:48 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 30ms (ActiveRecord: 1.0ms | Allocations: 2219)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:20:48 -0400
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 17:20:48 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 31.5ms | Allocations: 21308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.6ms | Allocations: 604)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.5ms | Allocations: 33343)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms | Allocations: 35171)
+
+
+Started GET "/users/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:20:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/_calendar.scss"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-05 17:20:50 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 148)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.1ms | Allocations: 20279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.8ms | Allocations: 564)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 32059)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.0ms | Allocations: 32713)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-05 17:20:52 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"44@44.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "44@44.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 292ms (ActiveRecord: 2.7ms | Allocations: 3932)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:20:52 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.1ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 27.0ms | Allocations: 14580)
+  Rendered pages/home.html.erb within layouts/application (Duration: 32.4ms | Allocations: 16630)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 1104)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.9ms | Allocations: 29034)
+Completed 200 OK in 66ms (Views: 58.1ms | ActiveRecord: 3.0ms | Allocations: 31719)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:20:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:21:37 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.4ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 26.1ms | Allocations: 14575)
+  Rendered pages/home.html.erb within layouts/application (Duration: 31.8ms | Allocations: 16608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 1496)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 30236)
+Completed 200 OK in 70ms (Views: 59.9ms | ActiveRecord: 2.3ms | Allocations: 33225)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:21:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:22:22 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.3ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 26.9ms | Allocations: 14574)
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.3ms | Allocations: 16612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 1496)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 30240)
+Completed 200 OK in 76ms (Views: 68.2ms | ActiveRecord: 2.2ms | Allocations: 33226)
+
+
+Started GET "/_calendar.scss" for 127.0.0.1 at 2022-03-05 17:22:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/_calendar.scss"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-05 17:22:28 -0400
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mMeeting Load (1.5ms)[0m  [1m[34mSELECT "meetings".* FROM "meetings" WHERE "meetings"."start_time" BETWEEN $1 AND $2[0m  [["start_time", "2022-02-28"], ["start_time", "2022-04-03"]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered simple_calendar/_month_calendar.html.erb (Duration: 26.7ms | Allocations: 13970)
+  Rendered pages/home.html.erb within layouts/application (Duration: 30.6ms | Allocations: 15083)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 1082)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 27439)
+Completed 200 OK in 68ms (Views: 60.4ms | ActiveRecord: 2.5ms | Allocations: 29407)
+
+
