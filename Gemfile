@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.0'
-
+# Adicionar Gems para funcionar heroku
+gem 'net-smtp', require: false
+gem 'net-pop', require: false
+gem 'net-imap', require: false
 gem 'bootstrap-datepicker-rails'
 gem 'compass', ">= 0.10.6"
 gem 'bootstrap-datepicker'
